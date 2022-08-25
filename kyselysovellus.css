@@ -1,6 +1,7 @@
 body {
     background-color: snow;
     padding: 1rem;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #kysymys {
@@ -9,6 +10,7 @@ body {
     text-align: center;
     padding: 1rem;
     margin: 1rem;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .vaihtoehto {
@@ -17,6 +19,7 @@ body {
     text-align: center;
     padding: 1rem;
     margin: 1rem;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .vaihtoehto:hover {
@@ -26,8 +29,10 @@ body {
 #seuraava {
     padding: 1rem;
     margin: 1rem;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #nappi {
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }

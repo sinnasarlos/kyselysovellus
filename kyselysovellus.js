@@ -1,32 +1,34 @@
+//Not correctly translated
+
 import 'dart:html';
 
-main() {
+function main() {
   var kysymykset = [];
 
   var vaihtoehdot = [];
   vaihtoehdot.add({'teksti': 'Kyllä', 'oikein': true});
   vaihtoehdot.add({'teksti': 'Ei', 'oikein': false});
 
-  kysymykset.add({'teksti': 'Kysymys 1?', 'vaihtoehdot': vaihtoehdot});
+  kysymykset.add({'teksti': 'Siistiä?', 'vaihtoehdot': vaihtoehdot});
 
-  kysymykset.add({'teksti': 'Kysymys 2?', 'vaihtoehdot': vaihtoehdot});
+  kysymykset.add({'teksti': 'Toimiiko?', 'vaihtoehdot': vaihtoehdot});
 
-  querySelector('#seuraava').onClick.listen((e) {
+querySelector('#seuraava').onClick.listen((e) => {
     kysymykset.shuffle();
     asetaKysymys(kysymykset[0]);
   });
 }
 
-asetaKysymys(kysymys) {
+function asetaKysymys(kysymys) {
   asetaKysymysteksti(kysymys['teksti']);
   asetaVastausvaihtoehdot(kysymys['vaihtoehdot']);
 }
 
-asetaKysymysteksti(teksti) {
+function asetaKysymysteksti(teksti) {
   querySelector('#kysymys').text = teksti;
 }
 
-asetaVastausvaihtoehdot(vaihtoehdot) {
+function asetaVastausvaihtoehdot(vaihtoehdot) {
   querySelector('#vastaukset').children.clear();
 
   for (var i = 0; i < vaihtoehdot.length; i++) {
@@ -34,12 +36,12 @@ asetaVastausvaihtoehdot(vaihtoehdot) {
   }
 }
 
-lisaaVastausvaihtoehto(vaihtoehto) {
+function lisaaVastausvaihtoehto(vaihtoehto) {
   var elementti = Element.div();
   elementti.className = 'vaihtoehto';
   elementti.text = vaihtoehto['teksti'];
 
-  elementti.onClick.listen((e) {
+  elementti.onClick.listen((e) => {
     if (vaihtoehto['oikein']) {
       elementti.text = 'oikein!';
     } else {
