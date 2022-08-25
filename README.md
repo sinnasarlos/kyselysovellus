@@ -1,4 +1,5 @@
 # kyselysovellus
 kysymyksiä ja vastausvaihtoehtoja
 
-lisättävä toiminnallisuus omien kysymysten ja vastausvaihtoehtojen lisäämiseen
+työn alla: toiminnallisuus omien kysymysten (String) ja vastausvaihtoehtojen (String + bool) lisäämiseen
+            kirjanpito oikein ja väärin menneiden vastausten laskua varten
